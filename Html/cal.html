@@ -1,0 +1,117 @@
+<style>
+    .demo-non-form {
+        color: initial;
+        width: 100%;
+        padding: 10px;
+        margin: 6px 0 12px 0;
+        border: 1px solid #ccc;
+        border-radius: 0;
+        font-family: arial, verdana, sans-serif;
+        font-size: 14px;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+    }
+    
+    .external-container button.external-button {
+        font-weight: 400;
+        padding: 10px;
+        margin: 6px 0 13px 0;
+        width: 100%;
+    }
+</style>
+<script>
+    mobiscroll.settings = {
+        theme: 'ios',
+        display: 'bubble'
+    };
+
+    var now = new Date();
+
+    mobiscroll.calendar('#demo-calendar-mobile', {
+        controls: ['calendar', 'time'],
+        onInit: function(event, inst) {
+            inst.setVal(now, true);
+        }
+    });
+
+    mobiscroll.calendar('#demo-calendar-desktop', {
+        controls: ['calendar', 'time'],
+        touchUi: false,
+        onInit: function(event, inst) {
+            inst.setVal(now, true);
+        }
+    });
+
+    mobiscroll.calendar('#demo-calendar-header', {
+        controls: ['calendar', 'time'],
+        headerText: '{value}',
+        onInit: function(event, inst) {
+            inst.setVal(now, true);
+        }
+    });
+
+    mobiscroll.calendar('#demo-calendar-non-form', {
+        controls: ['calendar', 'time'],
+        onInit: function(event, inst) {
+            inst.setVal(now, true);
+        }
+    });
+
+    var instance = mobiscroll.calendar('#demo-calendar-external', {
+        controls: ['calendar', 'time'],
+        showOnTap: false,
+        showOnFocus: false,
+        onInit: function(event, inst) {
+            inst.setVal(new Date(), true);
+        }
+    });
+
+    document
+        .getElementById('show-demo-calendar-external')
+        .addEventListener('click', function() {
+            instance.show();
+        }, false);
+</script>
+<div mbsc-form>
+    <div class="mbsc-grid mbsc-form-grid">
+        <div class="mbsc-row">
+            <div class="mbsc-col-sm-12 mbsc-col-md-4">
+                <label>
+                    Mobile
+                    <input id="demo-calendar-mobile" data-input-style="box" data-label-style="stacked" />
+                </label>
+            </div>
+            <div class="mbsc-col-sm-12 mbsc-col-md-4">
+                <label>
+                    Desktop
+                    <input id="demo-calendar-desktop" data-input-style="box" data-label-style="stacked"  />
+                </label>
+            </div>
+            <div class="mbsc-col-sm-12 mbsc-col-md-4">
+                <label>
+                    Header text
+                    <input id="demo-calendar-header" data-input-style="box" data-label-style="stacked"  />
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mbsc-grid">
+    <div class="mbsc-row">
+        <div class="mbsc-col-sm-12 mbsc-col-md-6">
+            <label for="demo-calendar-non-form">Date</label>
+            <input id="demo-calendar-non-form" class="demo-non-form" />
+        </div>
+        <div class="mbsc-col-sm-12 mbsc-col-md-6">
+            <div class="mbsc-row mbsc-align-items-end">
+                <div class="mbsc-col-9">
+                    <label for="demo-calendar-external">Show on button click only</label>
+                    <input id="demo-calendar-external" class="demo-non-form" />
+                </div>
+                <div class="mbsc-col-3 external-container">
+                    <button id="show-demo-calendar-external" class="external-button">Show</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

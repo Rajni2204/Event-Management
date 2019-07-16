@@ -1,0 +1,361 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="css\custcss.css">
+<link rel="text/javascript" href="js\ratingjs.js">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script type="text/javascript" src="magicRating.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese" rel="stylesheet">
+
+<head>
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="mdetails.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>My
+                Details</a>
+            <a href="mbook.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i
+                    class='fas fa-id-card-alt'></i> &nbsp; Book An Event</a>
+            <a href="mbookh.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i
+                    class='fas fa-history'></i>&nbsp; Booking History</a>
+            <a href="mviewvenue.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i
+                    class='fas fa-landmark'></i>&nbsp;Book Venue</a>
+            <a href="mfeedback.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i
+                    class='far fa-comment-dots'></i> &nbsp;Feedback</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i
+                    class="fa fa-search"></i></a>
+        </div>
+
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+            <a href="#team" class="w3-bar-item w3-button">Team</a>
+            <a href="#work" class="w3-bar-item w3-button">Work</a>
+            <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+            <a href="#" class="w3-bar-item w3-button">Search</a>
+        </div>
+    </div>
+    <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="madvenue">
+        <fieldset>
+            <div class="heading_msg">
+                <h4 style="color: saddlebrown;">Please help us.Your feedback Is valuable.</h3>
+            </div>
+
+            <!-- <div class="container">
+       <div class="heading_msg">
+                            <h3>Please help us serve you better by telling us about your product and service experience so far. We appreciate your business and want to make sure we meet your expectations.</h3>
+                        </div>
+        
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Next</button>
+        -->
+            <div class="modal fade " id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content page1-->
+                    <div class="modal-content" id="main_popup">
+                        <div class="modal-body  ">
+                            <div class="col-lg-12">
+                                <button type="button" class="close close_model" data-dismiss="modal"><span class="glyphicon glyphicon-remove-circle
+                                "></span>
+                                </button>
+                            </div>
+                            <div class="img_main">
+                                <img src="http://res.cloudinary.com/dxssokt4h/image/upload/v1509252236/img_1_hya4kw.jpg" />
+                            </div>
+
+                            <div class="row text-center give_feedback">
+
+                                <button type="button" style="background-color: antiquewhite; width: 10%" id="give_feedback" class="btn btn-default">Give Feedback</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--END Modal content page1-->
+                    <!-- Modal content page2-->
+                    <div id="page2" style="display:none;" class="modal-content" style="box-shadow:none;">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove-circle
+                                        "></span></button>
+
+                        </div>
+                        <table align="center">
+                            <div class="modal-body second_tab">
+                                <div class="row">
+
+                                    <div class="mobile_progress_bar">
+                                        <div class="text-left visible-xs" style="margin-bottom:40px;">
+
+                                            <div class="progress">
+                                                <div data-percentage="0%" style="width: 60%;" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <tr>
+                                        <td>
+                                            <div class="col-xs-12 col-lg-6 col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <div class="col-md-10 col-xs-12 col-sm-8">
+                                                        <div class="mat-input">
+                                                            <div class="mat-input-outer">
+                                                                <label class="">Name:</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<input type="text" autocomplete="off" />
+                                                                <div class="border"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <div class="col-xs-12 col-lg-6 col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <div class="col-md-10 col-xs-12 col-sm-8">
+                                                        <div class="mat-input">
+                                                            <div class="mat-input-outer">
+                                                                <label class="">Email Address:</label>
+                                                                <input type="text" autocomplete="off" />
+
+                                                                <div class="border"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                </div>
+                                </td>
+                                </tr>
+
+
+
+                                <!--<div class="row">
+                            <div class="col-lg-12 col-sm-12 col-md-12 hidden-xs">
+                                <button  style="background-color: #ff7429" type="button" id="ok" class="btn btn-default ok" data-dismiss="">Ok  <span class="glyphicon glyphicon-ok"></span></button>
+                            </div>
+                        </div>-->
+
+
+                                <tr>
+                                    <td>
+                                        <div class="row">
+                                            <div class="visible-xs text-center">
+                                                <button style="background-color: #ff7429" type="button" id="ok" class="btn btn-default ok" data-dismiss="">Ok <span
+                                                        class="glyphicon glyphicon-ok"></span></button></div>
+                                        </div>
+                            </div>
+                            </td>
+                            </tr>
+
+
+
+                        </table>
+                        <div class="modal-footer">
+
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6 col-md-6 text-left hidden-xs">
+
+
+
+                                    <div class="progress">
+                                        <div data-percentage="0%" style="width: 60%;" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- END Modal content page2-->
+                    <!-- Modal content page3-->
+                    <div id="page3" style="display:none;" class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove-circle
+                                "></span></button>
+                        </div>
+                        <div class="mobile_progress_bar">
+                            <div class="text-left visible-xs" style="margin-bottom:40px;">
+
+                                <div class="progress">
+                                    <div data-percentage="0%" style="width: 60%;" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <table align="center">
+                            <div class="modal-body row">
+                                <tr>
+                                    <td>
+                                        <div class="col-md-12">
+                                            <div class="col-md-6">
+
+                                                <div class="col-md-11">
+                                                    <h5>
+                                                        How would you rate the look and feel of the website?
+                                                    </h5>
+                                                    <span style="color:red" id="rating" class="rating" data-current-rating=0 data-icon-bad='fa fa-heart-o' data-icon-good='fa fa-heart'></span>
+                                                </div>
+                                            </div>
+                                    </td>
+                                </tr>
+                                <!--- <div class="col-md-6">
+                                <div class="col-md-1 hidden-xs">
+                                    <h5>b.</h5>
+                                </div>
+                                <div class="col-md-11 hidden-xs">
+                                    <h5>
+                                        How would you rate the look and feel of the website?
+                                    </h5>
+                                    <span style="color:#faa524;" id="rating" class="rating" data-current-rating=0 data-icon-bad='fa fa-thumbs-o-up' data-icon-good='fa fa-thumbs-up'></span>
+                                </div>
+                            </div>-->
+
+                                </div>
+                                <div class="col-md-12">
+                                    <!---<div class="col-md-6">
+                                <div class="col-md-1 hidden-xs">
+                                    <h5>c.</h5>
+                                </div>
+                                <div class="col-md-11">
+                                    <h5>
+                                        How would you rate the look and feel of the website?
+                                    </h5>
+                                    <span style="color:#ff7429;" id="rating" class="rating" data-current-rating=3 data-icon-bad='fa fa-check-square-o' data-icon-good='fa fa-check'></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-1 hidden-xs">
+                                    <h5>d.</h5>
+                                </div>
+                                <div class="col-md-11">
+                                    <h5>
+                                        How would you rate the look and feel of the website?
+                                    </h5>
+                                    <span id="rating" style="color:#ff7429;" class="rating" data-current-rating=3 data-icon-bad='fa fa-star-o' data-icon-good='fa fa-star'></span>
+                                </div>
+                            </div>-->
+
+                                </div>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-12">
+                                            <div class="col-xs-12 col-lg-6 col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <div class="col-md-10 col-xs-12 col-sm-8">
+                                                        <div class="mat-input">
+                                                            <div class="mat-input-outer" style="margin-bottom:35px;">
+                                                                <label style="font-size: 15px;
+                                                    line-height: 20px;">comments or suggestions:</label>
+                                                                <input style="height:60px;" type="text" autocomplete="off" />
+                                                                <div class="border"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" style="background-color: lightseagreen" id="ok2" class="btn btn-default ok" data-dismiss="">Submit <span
+                                                    class="glyphicon glyphicon-ok"></span></button></div>
+                                        </div>
+                            </div>
+                            </td>
+                            </tr>
+                        </table>
+
+                        <div class="modal-footer col-md-12">
+
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6 col-md-6 text-left hidden-xs">
+
+
+
+                                    <div class="progress">
+                                        <div data-percentage="0%" style="width: 60%;" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- END Modal content page3-->
+                    <!-- Modal content page 4-->
+                    <div id="page4" style="display:none;" class="modal-content">
+                        <div class="modal-body ">
+                            <div class="col-lg-12">
+                                <button type="button" class="close close_model" data-dismiss="modal"><span class="glyphicon glyphicon-remove-circle
+                                        "></span>
+                            </button>
+                            </div>
+                            <div class="thank_you_body">
+                                <div class="heading_msg2">
+                                    <h3>
+                                        <span>Thank you!</span><br> Your feedback was sent successfully. We will work on it to improve our website.
+                                    </h3>
+
+                                </div>
+                                <div class="row text-center give_feedback">
+
+                                    <button type="submit" style="background-color:lightgreen;" class="btn btn-default " data-dismiss="modal">Close</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--End Modal content page 4-->
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+        <h4>Follow Us</h4>
+        <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i
+                class="fa fa-facebook"></i></a>
+        <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i
+                class="fa fa-twitter"></i></a>
+        <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i
+                class="fa fa-google-plus"></i></a>
+        <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i
+                class="fa fa-instagram"></i></a>
+        <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i
+                class="fa fa-linkedin"></i></a>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Celebrations.com</a></p>
+
+        <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+            <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+            <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+                    <i class="fa fa-chevron-circle-up"></i></span></a>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

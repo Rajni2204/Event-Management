@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <style>
+        .row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+.button0{
+    background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 70;
+  height: 40;
+}
+.button1{
+    background-color: red;
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+.button2{
+    background-color:cadetblue;
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+fieldset { 
+  display: block;
+  background-color: rgba(0,0,0,0.2);
+  text-align: center;
+  margin-bottom: 30%;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: none;
+}
+.btext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 50%;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+div.gallery1 {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 50%;
+}
+
+div.gallery1:hover {
+  border: 1px solid #777;
+}
+
+div.gallery1 img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:rgba(0,0,0,0.2);
+}
+body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .navbar {
+      overflow: hidden;
+      background-color:rgb(248, 239, 239);
+    }
+    
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: rgb(15, 15, 15);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+      font-size: 16px;  
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: rgb(233, 105, 20);
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      float: none;
+      color: rgb(241, 25, 25);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+   </style>
+</head>
+<body id="myPage">
+
+<!-- Sidebar on click 
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#home" class="w3-bar-item w3-button">HOME</a>
+  <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+  
+</nav>-->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>HOME</a>
+  <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">ABOUT</a>
+  <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button" title="Notifications">OUR SERVICES <i class="fa fa-caret-down"></i></button>     
+        <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+          <a href="#wedding" class="w3-bar-item w3-button">WEDDING</a>
+          <a href="#bday" class="w3-bar-item w3-button">BIRTHDAY PARTIES</a> 
+          <a href="#anniversary" class="w3-bar-item w3-button">ANNIVERSARY EVENTS</a>
+          <a href="#family" class="w3-bar-item w3-button">GETTOGETHER</a>  
+        </div>
+      </div>
+  
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">LOGIN <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#admin" class="w3-bar-item w3-button">ADMIN</a>
+      <a href="#customer" class="w3-bar-item w3-button">CUSTOMER</a>  
+    </div>
+  </div>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#work" class="w3-bar-item w3-button">Work</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity" id="home">
+        <div class="btext"><marquee><h1>Wel-Come To Celebrations Events</h1></marquee></div>
+  <img src="bgimage.jpg"  style="width:100%;min-height:350px;max-height:600px;">
+</div>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!-- about -->
+<div class="w3-container w3-padding-64 w3-center" id="about">
+<h2>ABOUT</h2>
+</di>
+<div class="row">
+        <div class="column">
+          <img src="7.jpg"  style="width:100%; height: 100%">
+        </div>
+        <div class="column">
+          <fieldset style="text-align: center; color: antiquewhite; border: none" ;>
+            <h2 style="color: brown">Celebration Events Management</h2>
+            <p><h5 style="color: black;">Celebrations Events is an event management company providing innovative solutions, result oriented and unique execution of events. 
+            Celebrations Events is an organization which is dedicated to produce and create exemplary productions and events for a memorable experience.Whether you are planning an elegant, themed or an intimate event, our organization provides the highest standards of service and professionalism that will ensure the success of your event.
+             Our expertise starts from day zero with the pre-event support of planning, destination selection, Venuee research & booking, and catering, to event set-up of stage, technical support, entertainment and on-ground support, to post-event support. We take care of everything.</h5></p>
+           </fieldset>
+        </div>
+      </div>
+      <!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!-- customer login-->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="customer">
+
+
+  <img src="bg-01.jpg" alt="Snow" style="width:100%">
+  
+        <fieldset>
+                    
+        
+                Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" style="width: 30%"><br><br>
+               Password:&nbsp;<input type="password" style="width: 30%"><br><br>
+               <button class="button0" type="submit" onclick="window.location.href='#mydetails'">Login</button>
+                <button class="button1" type="submit">Cancel</button>
+                <button class="button2" onclick="window.location.href='#registration'" id="myBtn">Register</button>
+       </fieldset>
+  </div>
+  <!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!--<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+    class="w3-bar-item w3-button">Close Menu</a>
+    <a href="#mydetails" onclick="w3_close()" class="w3-bar-item w3-button">My Details</a>
+    <a href="#book" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  </nav>
+  <div class="w3-top">
+      <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+        <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+      </div>
+    </div>-->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="mydetails">
+    <div class="navbar">
+        <a href="#mydetails">My Details</a>
+        <a href="#book">Book An Event</a>
+            <a href="#bookhi">Booking History</a>
+       <a href="#viewvenue">View Venue</a>
+            <a href="#Feedback">FeedBack</a>
+            <a href="#Logout">Logout</a>
+  
+          </div>
+       
+    
+      <fieldset>
+          
+                      
+              <legend>MyDetails:</legend>
+              <table align="center">
+             <tr><td> Name</td><td><input type="text" style="width: 150%"></td></tr> 
+             <tr><td> Address</td><td><input type="text" style="width: 150%"></td></tr> 
+              <tr><td> Mobile No</td><td><input type="text" style="width: 150%"></td></tr> 
+                <tr><td> Email-id</td><td><input type="text" style="width: 150%"></td></tr> 
+             <tr><td><button class="button0" type="submit">Update</button>
+               <button class="button1" type="submit">Cancel</button></td></tr> 
+              
+              </table>
+      </fieldset>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!--Book Event-->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="book">
+<div class="navbar">
+    <a href="#mydetails">My Details</a>
+        <a href="#book">Book An Event</a>
+            <a href="#bookhi">Booking History</a>
+       <a href="#viewvenue">View Venue</a>
+            <a href="#Feedback">FeedBack</a>
+            <a href="#Logout">Logout</a>
+
+      </div>
+   
+
+  <fieldset>
+      
+                  <table align="center">
+          <h3>Book An Event</h3>
+          <tr><td>Event Type</td><td><select  name="Events">
+              <option value='' selected>Select an event</option>
+            <option value="Wedding">Wedding</option>
+              <option value="weddinganniversary">Wedding Anniversary</option>
+              <option value="Birthdayparty">Birthday Party</option>
+              <option value="gettogether">Family get Together</option>
+        </select></td></tr>
+           
+              
+          <tr><td>Event Place</td><td><select name="place">
+              <option value='' selected>Select place</option>
+            <option value="Wedding">pune</option>
+              <option value="weddinganniversary">aurangabad</option>
+              <option value="Birthdayparty">mumbai</option>
+              <option value="gettogether">nagpur</option>
+        </select></td></tr>
+          <tr><td>No. Of Guest</td><td><input type="text" style="width: 150%"></td></tr>
+          <tr><td> Email-id</td><td> <input type="text" style="width: 150%"></td></tr>
+          <tr><td>Select Date</td><td> <input type="date" name="bday">
+            </td></tr>
+          <tr><td>
+          <button class="button0" type="submit">Search</button>
+           <button class="button1" type="submit">Cancel</button></td></tr>
+          </table>
+  </fieldset>
+  </div>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!--Booking History-->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="bookhi">
+    <div class="navbar">
+        <a href="#mydetails">My Details</a>
+            <a href="#book">Book An Event</a>
+                <a href="#bookhi">Booking History</a>
+           <a href="#viewvenue">View Venue</a>
+                <a href="#Feedback">FeedBack</a>
+                <a href="#Logout">Logout</a>
+          </div>
+          </div>
+ <!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!--Book Veneu-->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="viewvenue">
+    <div class="navbar">
+        <a href="#mydetails">My Details</a>
+            <a href="#book">Book An Event</a>
+                <a href="#bookhi">Booking History</a>
+           <a href="#viewvenue">View Venue</a>
+                <a href="#Feedback">FeedBack</a>
+                <a href="#Logout">Logout</a>
+    
+          </div>
+<fieldset>
+        
+    <table align="center">
+<h3>View Venue</h3>
+
+<tr><td>Event Type</td><td><select  name="Events">
+<option value='' selected>Select an event</option>
+<option value="Wedding">Wedding</option>
+<option value="weddinganniversary">Wedding Anniversary</option>
+<option value="Birthdayparty">Birthday Party</option>
+<option value="gettogether">Family get Together</option>
+</select></td></tr>
+
+
+<tr><td>Event Place</td><td><select name="place">
+<option value='' selected>Select place</option>
+<option value="Wedding">pune</option>
+<option value="weddinganniversary">aurangabad</option>
+<option value="Birthdayparty">mumbai</option>
+<option value="gettogether">nagpur</option>
+</select></td></tr>
+<tr><td>Cost</td><td><input type="text"></td></tr>
+<tr><td>
+<button class="button0" type="submit">Submit</button>
+<button class="button1" type="submit">Cancel</button></td></tr>
+</table>
+</fieldset>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!--feedback-->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="Feedback">
+    <div class="navbar">
+        <a href="#mydetails">My Details</a>
+            <a href="#book">Book An Event</a>
+                <a href="#bookhi">Booking History</a>
+           <a href="#viewvenue">View Venue</a>
+                <a href="#Feedback">FeedBack</a>
+                <a href="#Logout">Logout</a>
+          </div>
+          <fieldset>
+                 
+              <h2 style="color: whitesmoke">Your Feedback is valueable for us!!!</h2>
+              
+             Feedback: <input type="text" style="width:30%; height: 20%"><br><br>
+        
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <button class="button0" type="submit"style="width:30%; height:5%;">Submit</button>
+               
+            </fieldset>
+            </div>
+<!---------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+  <!-- registration-->
+  <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="registration">
+        <fieldset>
+                
+                <table text-align="center">
+                
+                <tr><td class="f1_label"> Name: </td><td><input type="text"><br></td></tr>
+                <tr><td class="f1_label"> Email-id:</td><td><input type="email"></td><br></tr>
+                <tr><td class="f1_label"> Mobile Number:</td><td><input type="text"><br></td> </tr>
+                <tr><td class="f1_label"> Gender:</td>
+                <td><input type="radio" name="gender" id="male"> <label for="m">Male</label> 
+                <input type="radio" name="gender" id="female"><label for="f">Female</label></td></tr>
+                <tr><td class="f1_label"> Password: </td><td><input type="password"><br></td></tr>
+                <tr><td class="f1_label"> Confirm Password:</td><td><input type="password"><br></td></tr>
+                <tr><td> <button class="button0" type="submit">Register</button></td>
+                <td><button class="button1" onclick="window.location.href ='#customer'">Cancel</button> </td></tr>
+                </table>
+                </fieldset>
+                </div>
+                <!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!-- admin login-->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="admin">
+
+
+        <img src="bg-01.jpg" alt="Snow" style="width:100%">
+        
+        <fieldset>
+                    
+        
+                Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username" style="width: 15%"><br><br>
+               Password:&nbsp;<input type="password" name="password" style="width: 15%"><br><br>
+               <button class="button0" type="submit" onclick="window.location.href='#addVenue'">Login</button>
+                <button class="button1" type="submit">Cancel</button>
+                
+                </fieldset>
+        </div>
+        <!---------------------------------------------------------------------------------------------------------------------->
+        <!---------------------------------------------------------------------------------------------------------------------->
+        
+                <!-- addvenue-->
+                <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="addvenue">
+                <div class="navbar">
+                    <a href="#addvenue">Add Venue</a>
+                    <a href="#newbooking">New Booking</a>
+                        <a href="#viewbooking">View Booking</a>
+                   <a href="#viewvenue1">View Venue</a>
+                        <a href="#viewfeedback">View FeedBack</a>
+                        <a href="#Logout">Logout</a>
+                      </div>
+                  <fieldset>
+                                  <table align="center">
+                          <h3>Add An Venue</h3>
+                          <tr><td>Add Venue</td><td><input type="text"></td></tr>
+                          <tr><td>Address</td><td><input type="text"></td></tr>
+                          <tr><td>Contact No.</td><td><input type="text"></td></tr>
+                          <tr><td>capacity</td><td><input type="text"></td></tr>
+                          <tr><td>Preffered For</td><td><select  name="preffered">
+                              <option value='' selected>All</option>
+                            <option value="Wedding">Wedding</option>
+                              <option value="weddinganniversary">Wedding Anniversary</option>
+                              <option value="Birthdayparty">Birthday Party</option>
+                              <option value="gettogether">Family get Together</option>
+                          </select></td></tr>
+                          <tr><td>Rs.</td><td><input type="text"></td></tr>
+                          <tr><td>
+                          <button class="button0" type="submit">Add</button>
+                           <button class="button1" type="submit">Cancel</button></td></tr>
+                          </table>
+                  </fieldset>
+                </div>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+        
+         <!-- New Booking-->
+                <div class="navbar">
+                    <a href="#addvenue">Add Venue</a>
+                    <a href="#newbooking">New Booking</a>
+                        <a href="#viewbooking">View Booking</a>
+                   <a href="#viewvenue1">View Venue</a>
+                        <a href="#viewfeedback">View FeedBack</a>
+                        <a href="#Logout">Logout</a>
+                      </div>
+                      <fieldset>
+                          <table align="center">
+                                  <h3>New Booking</h3>
+                                  <tr><td>Booking id</td><td><input type="text"></td></tr>
+                                  <tr><td>
+                                          <button class="button0" type="submit">Search</button></td></tr>
+                                          
+                                  <tr><td>Status</td><td><input type="text"></td></tr>
+                                  <tr><td>Change</td><td><select  name="change">
+                                          <option value='' selected>select</option>
+                                        <option value="Approve">Approve</option>
+                                          <option value="reject">Reject</option>
+                                         
+                                      </select></td></tr>
+                         
+                                      <tr><td>
+                                              <button class="button0" type="submit">Update</button></td></tr>    
+                  
+                  </fieldset>
+ <!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+        
+         <!-- View Booking-->
+                <div class="navbar">
+                    <a href="#addvenue">Add Venue</a>
+                    <a href="#newbooking">New Booking</a>
+                        <a href="#viewbooking">View Booking</a>
+                   <a href="#viewvenue1">View Venue</a>
+                        <a href="#viewfeedback">View FeedBack</a>
+                        <a href="#Logout">Logout</a>
+                      </div>
+                      <fieldset>
+        
+                          <table align="center">
+                  <h3>View Booking</h3>
+              
+                  <tr><td>Event Type</td><td><select  name="Events">
+                      <option value='' selected>Select an event</option>
+                    <option value="Wedding">Wedding</option>
+                      <option value="weddinganniversary">Wedding Anniversary</option>
+                      <option value="Birthdayparty">Birthday Party</option>
+                      <option value="gettogether">Family get Together</option>
+                  </select></td></tr>    
+                  <tr><td>Event Place</td><td><select name="place">
+                      <option value='' selected>Select place</option>
+                    <option value="Wedding">pune</option>
+                      <option value="weddinganniversary">aurangabad</option>
+                      <option value="Birthdayparty">mumbai</option>
+                      <option value="gettogether">nagpur</option>
+                  </select></td></tr>
+                  <tr><td>Cost</td><td><input type="text"></td></tr>
+                  <tr><td>
+                  <button class="button0" type="submit">Submit</button>
+                   <button class="button1" type="submit">Cancel</button></td></tr>
+                  </table>
+          </fieldset>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+        <!-- wedding -->
+        <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="wedding">
+        <img src="18.png" align="center" width="100%" height="55%">
+        <div class="row">
+                <div class="column">
+                  <img src="12.png"  style="width:95%">
+                </div>
+                <div class="column">
+        <h3>Wedding</h3>
+        <p>Celebration is fully capable and self sufficient bridal evemt planner that is dadicated to creating dream weddings.ourwedding reflect your lifestyle and personality and we work closely with you to create unforgattable momments and lifelong memories.we assist with all the planning, facilating, negotitating and handling of various aspect of wedding planning and ensure that you recieve the best services for the best prices </p>
+        <button class="button0" type="submit" onclick="window.location.href='gallary.html'" style="width:60%; height:8%;">View Wedding Gallary</button>    
+    </div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!-- birthday -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="bday">
+        <div class="row">
+                <div class="column">
+                  <img src="b1.jpg"  style="width:95%">
+                </div>
+                <div class="column">
+        <h3>Birthday Parties</h3>
+        <p>Celebrations is one of the leading event management company, organize birthday parties expressly for kids. We consider the likes of children for thematic decorations like frozen birthday party theme. Their favorite cartoon characters and super heroes will be the guests for the day. The decorated thematic cakes will amaze the child and other guests. Various entertainment programs such as magic show, balloon modeling, DJ etc will engross the children’s enjoyment. celebrations offer videography as well. celebrations team are true professionals capturing and producing extremely high quality videos for your  Anniversary Events event. A well catered and delicious food will make the guests delighted.  </p>
+        <button class="button0" type="submit" onclick="window.location.href='#gbday'" style="width:60%; height:8%;">View Birthday Parties Gallary</button>    
+    </div>
+</div>
+<!--Bday Gallay
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="gbday"></div>
+<h3 style="text-align: center">Birthday Parties gallary</h3>
+              
+            
+<div class="gallery">
+    
+      <img src="b1.jpg" alt="Cinque Terre" width="50%" height="50%">
+    </a>
+  </div>
+  
+  <div class="gallery">
+    
+      <img src="b2.jpg" alt="Forest" width="50%" height="50%">
+    </a>
+    </div>
+  
+  <div class="gallery">
+    
+      <img src="b3.jpg" alt="Northern Lights" width="50%" height="50%">
+    </a>
+    </div>
+  
+  <div class="gallery">
+  
+      <img src="b4.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <button class="button0" type="submit" onclick="window.location.href='#bday'" style="width:30%; height:5%;">Back</button>
+  </div>  -->
+  <!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+
+<!-- Anniversary-->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="anniversary">
+        <div class="row">
+                <div class="column">
+                  <img src="w1.png"  style="width:100%">
+                </div>
+                <div class="column">
+        <h3>Anniversary Events Parties</h3>
+        <p>Celebrations is one of the leading event management company, organize Anniversary Events parties. we work closely with you to create unforgattable momments and lifelong memories.we assist with all the planning, facilating, negotitating and handling of various aspect of Anniversary Events planning and ensure that you recieve the best services for the best prices.A well catered and delicious food will make the guests delighted.</p>
+        <button class="button0" type="submit" onclick="window.location.href='#ann'" style="width:40%; height:8%;">View Gallary</button>    
+    </div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!--anniversary Gallay
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="ann"></div>
+<h3 style="text-align: center">Anniversary events gallary</h3>
+              
+            
+<div class="gallery1">
+    
+      <img src="w1.png" alt="Cinque Terre" width="50%" height="50%">
+    </a>
+  </div>
+  
+  <div class="gallery1">
+    
+      <img src="w2.png" alt="Forest" width="50%" height="50%">
+    </a>
+    </div>
+  
+  <div class="gallery1">
+    
+      <img src="w3.png" alt="Northern Lights" width="50%" height="50%">
+    </a>
+    </div>
+  
+  <div class="gallery1">
+  
+      <img src="w4.png" alt="Mountains" width="600" height="400">
+    </a>
+      </div> 
+  <div class="gallery1">
+  
+      <img src="w5.png" alt="Mountains" width="600" height="400">
+    </a>
+      </div>  
+  <div class="gallery1">
+  
+      <img src="w6.png" alt="Mountains" width="600" height="400">
+    </a>
+      </div>  
+  <div class="gallery1">
+  
+      <img src="w7.png" alt="Mountains" width="600" height="400">
+    </a>
+     </div>--> 
+<!-- gettogether-->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="family">
+        <div class="row">
+                <div class="column">
+                  <img src="f4.jpg"  style="width:100%">
+                </div>
+                <div class="column">
+        <h3>GetTogether </h3>
+        <p>A Family get-together is always fun and memorable. We help plan the party for you and take the burden off your shoulders, family time is quality time and its the most important time you get to meet and greet family that you may not have seen for a long time get to know the new additions to the family(babies or newly weds) and also where each one lives. .</p>
+        <button class="button0" type="submit" onclick="window.location.href='g3.html'" style="width:40%; height:8%;">View Gallary</button>    
+    </div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!-- Container 
+<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+  style="position:absolute;top:-28px;right:24px">+</a>
+</div>
+
+----------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i> Karve Nagar, Pune</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +91 1515151515</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  celebrations@email.com</p>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label>I Like it!</label>
+      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!-- Image of location/map -->
+<img src="2.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Celebrations.com</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+   var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+} 
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

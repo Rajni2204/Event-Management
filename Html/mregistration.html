@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <style>
+        .row {
+            display: flex;
+        }
+        /* Create three equal columns that sits next to each other */
+        
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
+        
+        .button0 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 70;
+            height: 40;
+        }
+        
+        .button1 {
+            background-color: red;
+            color: white;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: auto;
+        }
+        
+        .button2 {
+            background-color: cadetblue;
+            color: white;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: auto;
+        }
+        
+        fieldset {
+            display: block;
+            background-color: rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-bottom: 30%;
+            padding-top: 0.35em;
+            padding-bottom: 0.625em;
+            padding-left: 0.75em;
+            padding-right: 0.75em;
+            border: none;
+        }
+    </style>
+</head>
+
+<body id="myPage">
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="mhome.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>HOME</a>
+            <a href="mabout.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">ABOUT</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-button" title="Notifications">OUR SERVICES <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                    <a href="mwedding.html" class="w3-bar-item w3-button">WEDDING</a>
+                    <a href="mbday.html" class="w3-bar-item w3-button">BIRTHDAY PARTIES</a>
+                    <a href="manniversary.html" class="w3-bar-item w3-button">ANNIVERSARY EVENTS</a>
+                    <a href="mfamily.html" class="w3-bar-item w3-button">GETTOGETHER</a>
+                </div>
+            </div>
+
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-button" title="Notifications">LOGIN <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                    <a href="madmin.html" class="w3-bar-item w3-button">ADMIN</a>
+                    <a href="mcustomer.html" class="w3-bar-item w3-button">CUSTOMER</a>
+                </div>
+            </div>
+            <a href="mcontact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i
+          class="fa fa-search"></i></a>
+        </div>
+
+        <fieldset>
+
+            <table text-align="center">
+
+                <tr>
+                    <td class="f1_label"> Name: </td>
+                    <td><input type="text"><br></td>
+                </tr>
+                <tr>
+                    <td class="f1_label"> Email-id:</td>
+                    <td><input type="email"></td><br>
+                </tr>
+                <tr>
+                    <td class="f1_label"> Mobile Number:</td>
+                    <td><input type="text"><br></td>
+                </tr>
+                <tr>
+                    <td class="f1_label"> Gender:</td>
+                    <td><input type="radio" name="gender" id="male"> <label for="m">Male</label>
+                        <input type="radio" name="gender" id="female"><label for="f">Female</label></td>
+                </tr>
+                <tr>
+                    <td class="f1_label"> Password: </td>
+                    <td><input type="password"><br></td>
+                </tr>
+                <tr>
+                    <td class="f1_label"> Confirm Password:</td>
+                    <td><input type="password"><br></td>
+                </tr>
+                <tr>
+                    <td> <button class="button0" type="submit">Register</button></td>
+                    <td><button class="button1" onclick="window.location.href ='#customer'">Cancel</button> </td>
+                </tr>
+            </table>
+        </fieldset>
+
+
+        <!---------------------------------------------------------------------------------------------------------------------->
+        <!---------------------------------------------------------------------------------------------------------------------->
+        <!-- Image of location/map -->
+        <img src="2.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
+
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+            <h4>Follow Us</h4>
+            <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i
+          class="fa fa-facebook"></i></a>
+            <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+            <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i
+          class="fa fa-google-plus"></i></a>
+            <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i
+          class="fa fa-instagram"></i></a>
+            <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i
+          class="fa fa-linkedin"></i></a>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Celebrations.com</a></p>
+
+            <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+                <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+                <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i></span></a>
+            </div>
+        </footer>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+            // Script for side navigation
+            function w3_open() {
+                var x = document.getElementById("mySidebar");
+                x.style.width = "300px";
+                x.style.paddingTop = "10%";
+                x.style.display = "block";
+            }
+
+            // Close side navigation
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+
+            // Used to toggle the menu on smaller screens when clicking on the menu button
+            function openNav() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
+
+</body>
+
+</html>

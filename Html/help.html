@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css\adprofile.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css\mainstyle.css">
+    <link rel="stylesheet" href="css\adsidecss.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.material.mobile.min.css" />
+    <link rel="stylesheet" href="css\indexcss.css">
+    <script type="text/javascript" src="js\caljs.js"></script>
+    <link href="css\cal.css" rel="stylesheet" type="text/css" />
+    <script src="https://kendo.cdn.telerik.com/2019.2.619/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2019.2.619/js/kendo.all.min.js"></script>
+    <link rel="stylesheet" href="css\mainstyle.css">
+
+
+</head>
+
+<body onload='hideTotal()'>
+    <div id="wrap">
+        <form action="" id="hform" onsubmit="return false;">
+            <div>
+                <div class="cont_order">
+
+                    <!--<div class="demo-section k-content">-->
+                    <div id="example" role="application">
+                        <h2>Please Select Your Choices?</h2>
+
+
+                        <h6>1.Decoration</h6>
+                        <div class="row">
+                            <div class="column">
+                                &nbsp;<img src="images\fd.jpg" style="width:70%; height:70%;"><br>
+                                <label for='includefl' class="inlinelabel">Flower Decoration</label>
+                                <input type="checkbox" value="df" multiple="multiple" id="flower" name='includef' onclick="calculateTotal()" />
+
+                            </div>
+                            <div class="column">
+                                <img src="images\bd.jpg" style="width:70%; height:70%;"><br>
+                                <br><label for='includebl' value="db" class="inlinelabel">Ballon Decoration</label>
+                                <input type="checkbox" multiple="multiple" id="ballon" name='includeb' onclick="calculateTotal()" />
+
+
+
+                            </div>
+                        </div>
+                        <h6>2. Catering</h6>
+                        <div class="row">
+                            <div class="column">
+                                <img src="images\breakf.jpg" style="width:70%; height:70%;"><br>
+                                <label for='includecbf' class="inlinelabel">Break Fast</label>
+                                <input type="checkbox" value="bf" multiple="multiple" id="breakfast" name='includebf' onclick="calculateTotal()" />
+                            </div>
+                            <div class="column">
+                                <img src="images\lunch.jpg" style="width:70%; height:70%;"><br>
+                                <br><label for='includebcl' value="cl" class="inlinelabel">Lunch</label>
+                                <input type="checkbox" multiple="multiple" id="lunch" name='includecl' onclick="calculateTotal()" />
+                            </div>
+                            <div class="column">
+                                <img src="images\dinner.jpg" style="width:70%; height:70%;"><br>
+                                <br><label for='includedn' value="dn" class="inlinelabel">Dinner</label>
+                                <input type="checkbox" multiple="multiple" id="dinner" name='includedn' onclick="calculateTotal()" />
+                            </div>
+                        </div>
+
+
+                        <h6>3. Other</h6>
+                        <div class="row">
+                            <div class="column">
+                                <img src="images\dj.jpg" style="width:70%; height:70%;"><br>
+                                <label for='includecbf' class="inlinelabel">DJ</label>
+                                <input type="checkbox" value="dj" multiple="multiple" id="dj" name='includedj' onclick="calculateTotal()" />
+                            </div>
+                            <div class="column">
+                                <img src="images\sl.png" style="width:70%; height:70%;"><br>
+                                <br><label for='includebcl' class="inlinelabel">Sound and Lighting</label>
+                                <input type="checkbox" value="sd" multiple="multiple" id="sd" name='includesd' onclick="calculateTotal()" />
+                            </div>
+                            <div class="column">
+                                <img src="images\ph.png" style="width:70%; height:70%;"><br>
+                                <br><label for='includedn' class="inlinelabel">Photography</label>
+                                <input type="checkbox" value="ph" multiple="multiple" id="ph" name='includeph' onclick="calculateTotal()" />
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div id="totalPrice"></div>
+
+
+                    <button onclick="window.location.href='book1.html'">Confirm</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+    <!---------------------------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------------------------->
+    <!-- Footer -->
+
+
+</body>
+
+</html>

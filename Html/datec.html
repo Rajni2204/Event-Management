@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="D:\sample events\css\adprofile.css">
+    <script src="D:\sample events\js\datejs.js"></script>
+    <script src="D:\sample events\js\dropd.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="D:\sample events\css\mainstyle.css">
+    <link rel="stylesheet" href="D:\sample events\css\adsidecss.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.material.mobile.min.css" />
+
+    <script src="https://kendo.cdn.telerik.com/2019.2.619/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2019.2.619/js/kendo.all.min.js"></script>
+
+</head>
+
+<body>
+    <form action="" id="hform" onsubmit="return false;">
+        <table>
+            <tr>
+                <td>Select Date<br>
+                    <input id="datepicker" value="datepicker" title="datepicker" style="width: 100%" />
+                </td>
+                <td>Event Type</td>
+                <td><select id="events" name="events">
+                  <option value='' selected>Select an event</option>
+                  <option name="Wg" value="Wg">Wedding</option>
+                  <option name="wa" value="wa">Wedding Anniversary</option>
+                  <option name="Bir" value="Bir">Birthday Party</option>
+                  <option name="get" value="get">Family get Together</option>
+                </select></td>
+            </tr>
+            <div id="totalPrice"></div>
+        </table>
+    </form>
+
+    <script>
+        var d_prices = new Array();
+        d_prices["wg"] = 'Wedding';
+        d_prices["wa"] = 'Wedding Anniversary';
+        d_prices["bir"] = 'Birthday Party';
+        d_prices["get"] = 'Family get Together';
+
+        var d = new date();
+
+        function date() {
+            var d1 = new date();
+            var theForm = document.forms["hform"];
+            var date1 = theForm.elements["datepicker"]
+            if (date1.checked == true) {
+                d1 = d;
+            }
+            return d1;
+        }
+
+        function wg() {
+            var wgvalue = 0;
+            //Get a reference to the form id="hform"
+            var theForm = document.forms["hform"];
+            //Get a reference to the checkbox id="includef"
+            var includeb1 = theForm.elements["wg"];
+
+            //If they checked the box set ballon to 15
+            if (includeb1.checked == true) {
+                wgvalue = 'Wedding';
+            }
+            //finally we return the candlePrice
+            return wgvalue;
+        }
+
+        function calculateTotal() {
+            //Here we get the total price by calling our function
+            //Each function returns a number so by calling them we add the values they return together
+            // var finalPrice = flPrice() + blPrice() + bfPrice() + clPrice() + dnPrice() + djPrice() + sdPrice() + phPrice();
+            var divobj = document.getElementById('totalPrice');
+
+            function finalPrice() {
+                if (d1 == wg) {
+                    console.info("a equals b");
+                }
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

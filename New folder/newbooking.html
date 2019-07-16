@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>First page</title>
+</head>
+
+    <style>
+      
+        h1   {color: white;}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:rgba(0,0,0,0.2);
+}
+body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .navbar {
+      overflow: hidden;
+      background-color:rgb(19, 18, 18);
+    }
+    
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+      font-size: 16px;  
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: rgb(32, 36, 39);
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+   fieldset { 
+  display: block;
+  background-color: rgba(42, 10, 117,0);
+  text-align: center;
+  margin-bottom: 10%;
+  border: none;
+  color: rgb(14, 1, 1);
+} 
+.button0{
+    background-color: rgb(64, 23, 248);
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 70;
+  height: 40;
+}
+.button1{
+    background-color: red;
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+img.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  -webkit-filter: blur(35px); /* Safari 6.0 - 9.0 */
+  filter: blur(8px);
+}
+.bg-4 { 
+    background-color: #2f2f2f;
+    color: #fff;
+    text-align: center;
+  }
+  .container-fluid {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+    </style>
+    </head>
+    <body>
+        <img class="background" src="bgimage.jpg"  width="300" height="300">
+        
+      <h1><marquee>Welome To Celebrations Events</marquee></h1>
+    
+    <div class="navbar">
+      <a href="addvenue.html">Add Venue</a>
+      <a href="newbooking.html">New Booking</a>
+          <a href="viewbooking.html">View Booking</a>
+     <a href="viewvenue1.html">View Venue</a>
+          <a href="viewfeedback.html">View FeedBack</a>
+          <a href="Logout.html">Logout</a>
+
+        </div>
+     
+  
+    <fieldset>
+            <table align="center">
+                    <h3>New Booking</h3>
+                    <tr><td>Booking id</td><td><input type="text"></td></tr>
+                    <tr><td>
+                            <button class="button0" type="submit">Search</button></td></tr>
+                            
+                    <tr><td>Status</td><td><input type="text"></td></tr>
+                    <tr><td>Change</td><td><select  name="change">
+                            <option value='' selected>select</option>
+                          <option value="Approve">Approve</option>
+                            <option value="reject">Reject</option>
+                           
+                        </select></td></tr>
+           
+                        <tr><td>
+                                <button class="button0" type="submit">Update</button></td></tr>    
+    
+    </fieldset>
+    <footer class="container-fluid bg-4 text-center">
+      <a href="https://www.celebrations.com">www.celebrations.com</a>
+    </footer>
+</body>
+</html>  

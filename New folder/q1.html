@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <style>
+        .row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+.button0{
+    background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 70;
+  height: 40;
+}
+.button1{
+    background-color: red;
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+.button2{
+    background-color:cadetblue;
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+fieldset { 
+  display: block;
+  background-color: rgb(241, 236, 247);
+  text-align: center;
+  margin-bottom: 10%;
+  border: none;
+  color: rgb(14, 1, 1);
+} 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color:lightgrey;
+  margin: auto;
+  padding: 20px;
+  border: none;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+   </style>
+</head>
+<body id="myPage">
+        
+<!-- Sidebar on click 
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#home" class="w3-bar-item w3-button">HOME</a>
+  <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+  
+</nav>-->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!-- Navbar -->
+<div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align">
+         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+         <a href="mdetails.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>My Details</a>
+         <a href="mbook.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Book An Event</a>
+         <a href="mbook.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Booking History</a>
+         <a href="mviewvenue.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Book Venue</a>
+         <a href="mfeedback.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Feedback</a>
+         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+        </div>
+       
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#work" class="w3-bar-item w3-button">Work</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="mbook">   
+  <fieldset>
+<table align="center">
+        <h3>Book An Event</h3>
+        <tr><td>Event Type</td><td><select  name="Events">
+            <option value='' selected>Select an event</option>
+          <option value="Wedding">Wedding</option>
+            <option value="weddinganniversary">Wedding Anniversary</option>
+            <option value="Birthdayparty">Birthday Party</option>
+            <option value="gettogether">Family get Together</option>
+        </select></td></tr>
+         
+            
+        <tr><td>Event Place</td><td><select name="place">
+            <option value='' selected>Select place</option>
+          <option value="Wedding">pune</option>
+            <option value="weddinganniversary">aurangabad</option>
+            <option value="Birthdayparty">mumbai</option>
+            <option value="gettogether">nagpur</option>
+        </select></td></tr>
+        <tr><td>No. Of Guest</td><td><input type="text" style="width: 150%"></td></tr>
+        <tr><td> Email-id</td><td> <input type="text" style="width: 150%"></td></tr>
+        <tr><td>Select Date</td><td> <input type="date" name="bday">
+          </td></tr>
+        <tr><td>
+        <button class="button0" id="myBtn" type="submit">Search</button>
+         <button class="button1" type="submit">Cancel</button></td></tr>
+        </table>
+        </fieldset>
+    </div>
+    <div id="myModal" class="modal">
+
+<!-- Modal content -->
+<div class="modal-content">
+<span class="close">&times;</span>
+<fieldset style="background-color: blanchedalmond;">
+            <ol>
+            
+                <li>
+                
+                    <h3>What Do you need help with?</h3>
+                    
+                    <div>
+                        <input type="checkbox" name="ch1" id="ch1a" value="A" />
+                        <label for="question-1-answers-A">A) Venue Decoration </label>
+                    </div>
+                    
+                    <div>
+                            <input type="checkbox" name="ch2" id="ch2b" value="B" />
+                            <label for="question-1-answers-B">B)Flower Decoration  </label>
+                        </div>
+                    
+                        <div>
+                                <input type="checkbox" name="ch3" id="ch3c" value="C" />
+                                <label for="question-1-answers-C">C)Dj </label>
+                            </div>
+                            <div>
+                                    <input type="checkbox" name="ch4" id="ch4d" value="D">
+                                    <label for="question-1-answers-D">D) Catering </label> 
+                                </div>
+                                <div>
+                                        <input type="checkbox" name="ch5" id="ch5e" value="E" />
+                                        <label for="question-1-answers-E">E)Sound and Lighting </label>
+                                    </div>
+                                
+                                    <div>
+                                            <input type="checkbox" name="ch6" id="ch6f" value="F" />
+                                            <label for="question-1-answers-F">F)Anchoring and Hosting </label>
+                                        </div>
+                                        <div>
+                                                <input type="checkbox" name="ch7" id="ch7g" value="G" />
+                                                <label for="question-1-answers-G">G)Photography </label>
+                                            </div>
+                                        
+                                            <div>
+                                                    <input type="checkbox" name="ch8" id="ch8h" value="H" />
+                                                    <label for="question-1-answers-H">H)Manpower Provider </label>
+                                                </div>       
+                </li>
+                </ol>     
+                <button class="button0" type="submit">Next</button>    
+            </div>
+        </fieldset>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------->
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Celebrations.com</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+   var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+} 
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+modal.style.display = "none";
+}
+}
+</script>
+
+</body>
+</html>
