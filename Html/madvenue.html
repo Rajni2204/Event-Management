@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css\mainstyle.css">
     <link rel="stylesheet" href="css\adsidecss.css">
+    <script type="text/javascript" src="js\advenuejs.js"></script>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
@@ -44,10 +46,10 @@
         <li class="nav-item dropdown">
             <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="images\adminim.png" class="avatar" alt="Avatar"> Admin <b class="caret"></b></a>
             <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></li>
+                <li><a href="logout1.php" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></li>
             </ul>
         </li>
-        <li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge"></span></a></li>
+        <li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"> &nbsp; Upcoming Events</i><span class="badge"></span></a></li>
         <li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge"></span></a></li>
 
     </ul>
@@ -76,44 +78,48 @@
     <!---------------------------------------------------------------------------------------------------------------------->
     <!---------------------------------------------------------------------------------------------------------------------->
     <!-- Footer -->
-    <fieldset>
-        <table align="center">
-            <h3>Add Venue</h3>
-            <tr>
-                <td>Add Venue</td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>Address</td>
-                <td><input type="text"></td>
-            </tr>
+    <form action="venue.php" method="POST">
+        <fieldset>
+            <table align="center">
+                <h3>Add Venue</h3>
+                <tr>
+                    <td>Add Venue</td>
+                    <td>
+                        <input id="venue" name="venue" type=" text " onclick="name()"></td>
+                </tr>
+                <tr>
+                    <td>city</td>
+                    <td>
+                        <input id="city" name="city" type=" text " onclick="name()"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input id="address" name="address" type="text " onclick="name()"></td>
+                </tr>
 
-            <tr>
-                <td>capacity</td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>Preffered For</td>
-                <td><select name="preffered">
-                      <option value='' selected>All</option>
-                      <option value="Wedding">Wedding</option>
-                      <option value="weddinganniversary">Wedding Anniversary</option>
-                      <option value="Birthdayparty">Birthday Party</option>
-                      <option value="gettogether">Family get Together</option>
-                    </select></td>
-            </tr>
-            <tr>
-                <td>Rs.</td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>
-                    <button class="button0" type="submit" style="font-size:17px">Add <i class="material-icons"></i></button>
-                    <button class="button1" type="submit">Cancel</button></td>
-            </tr>
-        </table>
-    </fieldset>
+                <tr>
+                    <td>capacity</td>
+                    <td><input id="capacity" name="capacity" type="text " onclick="name()"></td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td>Enter Event Type</td>
+                        <td><input name="preffered" type="text " onclick="name()"></td>
+                    </tr>
+                    <tr>
+                        <tr>
+                            <td>Enter Amount.</td>
+                            <td><input id="amount" name="amount" type="text " onclick="name()"></td>
+                        </tr>
+                        <tr>
+                            <td>
 
+                                <button class="button0 " name="add" type="submit " style="font-size:17px ">Add <i class="material-icons "></i></button>
+                                <button class="button1 " type="submit ">Cancel</button></td>
+                        </tr>
+            </table>
+        </fieldset>
+    </form>
 
 </body>
 

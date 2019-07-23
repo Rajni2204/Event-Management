@@ -3,9 +3,24 @@ fieldset {
     background-color: rgba(0, 0, 0, 0.2);
     text-align: center;
     margin-bottom: 30%;
-    margin-top: 7%;
-    margin-left: 20%;
+    margin-top: 5%;
+    margin-left: 10%;
     margin-right: 10%;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    border: none;
+    width: 90%;
+    height: 100%;
+}
+
+.fieldset2 {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 30%;
+    margin-top: 5%;
+    margin-left: 30%;
     padding-top: 0.35em;
     padding-bottom: 0.625em;
     padding-left: 0.75em;
@@ -65,6 +80,16 @@ fieldset {
     width: auto;
 }
 
+.button3 {
+    background-color: rgb(153, 139, 139);
+    color: white;
+    padding: 10px 15px;
+    margin-left: 20%;
+    border: bisque;
+    cursor: pointer;
+    width: 100%;
+}
+
 .button2 {
     background-color: cadetblue;
     color: white;
@@ -73,6 +98,10 @@ fieldset {
     border: none;
     cursor: pointer;
     width: auto;
+}
+
+table {
+    text-align: center;
 }
 
 .btext {

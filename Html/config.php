@@ -2,12 +2,15 @@
 define('USER', 'root');
 define('PASSWORD', '');
 define('HOST', 'localhost');
-define('DATABASE', 'airline1');
+define('DATABASE', 'events');
  
 try {
     $connection = new PDO("mysql:host=".HOST.";dbname=".DATABASE, USER, PASSWORD);
 } catch (PDOException $e) {
     exit("Error: " . $e->getMessage());
 }
+
+
+
 ?>
 

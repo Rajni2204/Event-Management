@@ -1,10 +1,8 @@
 $(document).ready(function() {
     var data = [
         "Aurangabad",
-        "Pune",
-        "nashik",
-        "mumbai",
-        "Nagpur"
+        "Pune"
+
     ];
 
     //create AutoComplete UI component
@@ -17,10 +15,10 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
     var data = [
-        "Wedding",
-        "Wedding Anniversary",
-        "Birthday Parties",
-        "Get together"
+        "wedding",
+        "Birthday Party",
+        "Wedding anniversary",
+        "Family Get together"
 
     ];
 

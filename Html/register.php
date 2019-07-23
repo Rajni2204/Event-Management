@@ -6,15 +6,16 @@ include('config.php');
 session_start();
  
 if (isset($_POST['register'])) {
+
  
     $username = $_POST['username'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $password = $_POST['password'];
-    $c_password = $_POST['password1'];
+   
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
- 
-    $query = $connection->prepare("SELECT * FROM users WHERE EMAIL=:email");
+
+    $query = $connection->prepare("SELECT * FROM users1 WHERE EMAIL=:email");
     $query->bindParam("email", $email, PDO::PARAM_STR);
     $query->execute();
  
@@ -23,7 +24,7 @@ if (isset($_POST['register'])) {
     }
     
     if ($query->rowCount() == 0) {
-        $query = $connection->prepare("INSERT INTO users(username,email,phone,password,password1) VALUES (:username,:email,:phone,:password_hash,:password_hash)");
+        $query = $connection->prepare("INSERT INTO users1(username,email,phone,password) VALUES (:username,:email,:phone,:password_hash)");
         $query->bindParam("username", $username, PDO::PARAM_STR);
         $query->bindParam("email", $email, PDO::PARAM_STR);
         $query->bindParam("phone", $phone, PDO::PARAM_STR);
@@ -34,10 +35,11 @@ if (isset($_POST['register'])) {
  
         if ($result) {
            // echo '<p class="success">Your registration was successful!</p>';
-           header("location:login.html"); 
+           header("location:maccount.php"); 
         } else {
             echo '<p class="error">Something went wrong!</p>';
         }
     }
 }
+
 ?>

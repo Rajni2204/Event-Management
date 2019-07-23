@@ -35,7 +35,7 @@ function blPrice() {
 var c_prices = new Array();
 c_prices["breakfast"] = 2000;
 c_prices["lunch"] = 15000;
-c_prices["lunch"] = 20000;
+c_prices["dinner"] = 20000;
 
 function bfPrice() {
     var breakfPrice = 0;

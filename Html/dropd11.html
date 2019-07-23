@@ -1,0 +1,59 @@
+<?php
+if (! empty($_POST['city'])) {
+    ?>
+    <table cellpadding="10" cellspacing="1">
+
+        <thead>
+            <tr>
+                <th><strong>Date</strong></th>
+                <th><strong>City</strong></th>
+                <th><strong>Event type</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+    $query = "SELECT * from booking";
+    $i = 0;
+    $selectedOptionCount = count($_POST['city']);
+    $selectedOption = "";
+    while ($i < $selectedOptionCount) {
+        $selectedOption = $selectedOption . "'" . $_POST['city'][$i] . "'";
+        if ($i < $selectedOptionCount - 1) {
+            $selectedOption = $selectedOption . ", ";
+        }
+        
+        $i ++;
+    }
+    $query = $query . " WHERE city in (" . $selectedOption . ")";
+    
+    $result = $db_handle->runQuery($query);
+}
+if (! empty($result)) {
+    foreach ($result as $key => $value) {
+        ?>
+                <tr>
+                    <td>
+                        <div class="col" id="date">
+                            <?php echo $result[$key]['Date']; ?>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col" id="city">
+                            <?php echo $result[$key]['city']; ?>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col" id="event">
+                            <?php echo $result[$key]['Event']; ?>
+                        </div>
+                    </td>
+                </tr>
+                <?php
+    }
+    ?>
+
+        </tbody>
+    </table>
+    <?php
+	}
+?>
