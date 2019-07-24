@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css\adprofile.css">
     <script src="js\datejs.js"></script>
-    <script src="js\dropd.js"></script>
+    <script src="js\search.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,18 +32,7 @@
 </head>
 
 <body>
-    <div class="sidebar">
 
-        <a href="mdetails.php"><!--<i
-            class='fas fa-landmark'></i>-->&nbsp; My Profile</a>
-        <a class="active" href="book11.html"><!--<i
-            class='fas fa-edit'>--></i>&nbsp;Book An Event</a>
-        <a href="mbookh.html"><!--<i
-            class='fas fa-eye'></i>-->&nbsp;Cancel An Event</a>
-        <a href="mfeedback.html">&nbsp;My History</a>
-    </div>
-    </div>
-    </div>
 
     <ul class="nav navbar-nav navbar-right ml-auto">
         <li class="nav-item dropdown">
@@ -60,34 +49,31 @@
         <div id="example">
 
 
+            <form action="venueserach.php" method="post">
+                <h3>Book An Event</h3>
 
-            <h3>Book An Event</h3>
+                <div class="row">
+                    <div class="column">
+                        <h4><label for="event">Choose event Type:</label></h4>
+                        <input id="preffered" style="width: 70%;" />
+                    </div>
+                    <div class="column">
+                        <h4><label for="city">Choose City:</label></h4>
+                        <input id="city" style="width: 70%;" />
+                    </div>
 
-            <div class="row">
-                <div class="column">
-                    <h4><label for="event">Choose event Type:</label></h4>
-                    <input id="event" style="width: 70%;" />
+                    <br>
+
+
+
+                    <button class="button0" onclick="window.location.href='help.html'" name="submit" type="submit">Search</button>
+                    <button class="button1" type="submit">Cancel</button>
                 </div>
-                <div class="column">
-                    <h4><label for="city">Choose City:</label></h4>
-                    <input id="city" style="width: 70%;" />
-                </div>
-                <div class="column">
-                    <h4><label for="city">Select date:</label></h4>
-                    <input id="datepicker" value="mm/dd/yyyy" title="datepicker" style="width: 70%" />
-
-                </div>
-                <br>
-
-
-            </div>
-            <button class="button0" onclick="window.location.href='help.html'" type="submit">Search</button>
-            <button class="button1" type="submit">Cancel</button>
-
+            </form>
 
 
         </div>
-        </div>
+
 
 
 
