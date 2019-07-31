@@ -34,12 +34,9 @@ $id = $_SESSION["id"] //Session variable id retrieved
 
     <div class="sidebar">
 
-        <a class="active" href="mdetails.html"><!--<i
-                class='fas fa-landmark'></i>-->&nbsp; My Profile</a>
-        <a href="book11.html"><!--<i
-                class='fas fa-edit'>--></i>&nbsp;Book An Event</a>
-        <a href="mbookh.html"><!--<i
-                class='fas fa-eye'></i>-->&nbsp;Cancel An Event</a>
+        <a class="active" href="mdetails.html">&nbsp; My Profile</a>
+        <a href="book11.html"></i>&nbsp;Book An Event</a>
+        <a href="mbookh.html">&nbsp;Cancel An Event</a>
         <a href="mfeedback.html">&nbsp;My History</a>
     </div>
     </div>
@@ -58,13 +55,7 @@ $id = $_SESSION["id"] //Session variable id retrieved
     </ul>
     </div>
 
-    <!--<div class="w3-top">
-        <div class="w3-bar w3-theme-d2 w3-left-align">
-            <div class="w3-bar w3-theme-d2 w3-left-align">
-                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-                <a href="malogout.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Logout</a>
-            </div>
-        </div>-->
+   
 
 
     <!-- Navbar on small screens -->
@@ -79,20 +70,40 @@ $id = $_SESSION["id"] //Session variable id retrieved
     <fieldset>
         <form action="update.php" method="POST">
             <table align="center">
+<?php
 
+$host = "localhost";
+$user = "root";
+$password = "";
+$dbname = "events";
+$conn = new mysqli($host, $user, $password, $dbname);
+$id = $_SESSION["id"];
+//$row = mysqli_fetch_array($query);
+?>
                 <h2 style="text-align: center">My Details</h2>
-                
+                <?php
+                 $sql = "SELECT email, phone, password FROM users1 WHERE id=$id";
+                 $result = $conn->query($sql);
+                 if ($result->num_rows > 0) {
+                     while ($row = $result->fetch_assoc()) {
+                ?>
 
 
                 <tr>
                     <td> Email-id</td>
-                    <td><input type="text" name="email" style="width: 150%"></td>
+                    <td><input type="text" name="email" value="<?php echo $row['email']; ?>" style="width: 150%"></td>
 
                 </tr>
                 <tr>
                     <td> Mobile No</td>
-                    <td><input type="text" name="phone" style="width: 150%"></td>
+                    <td><input type="text" name="phone" value="<?php echo $row['phone']; ?>"style="width: 150%"></td>
                 </tr>
+                     <?php
+                     }
+                    } else {
+                        echo "Unregistered user. Sign Up first.";
+                    }
+                    ?>
                 <tr>
                     <td><button class="button0" name="update" type="submit">Update</button>
                         <button class="button1" type="submit">Cancel</button></td>
@@ -102,9 +113,7 @@ $id = $_SESSION["id"] //Session variable id retrieved
         </form>
     </fieldset>
 
-    <!---------------------------------------------------------------------------------------------------------------------->
-    <!---------------------------------------------------------------------------------------------------------------------->
-    <!-- Footer -->
+    
 
 
 </body>

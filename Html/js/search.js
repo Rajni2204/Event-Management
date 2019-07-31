@@ -1,7 +1,7 @@
     $(document).ready(function() {
         var data = [
             "wedding",
-            "Birthday Party",
+            "Birthday party",
             "Wedding anniversary",
             "Family Get together"
 
@@ -11,8 +11,8 @@
         $("#preffered").kendoAutoComplete({
             dataSource: data,
             filter: "startswith",
-            placeholder: "Select preffered...",
-            separator: ", "
+            placeholder: "Select preffered..."
+
         });
     });
 
@@ -30,6 +30,6 @@
             dataSource: data,
             filter: "startswith",
             placeholder: "Select city...",
-            separator: ", "
+
         });
     });

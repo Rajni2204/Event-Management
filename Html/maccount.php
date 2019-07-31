@@ -26,14 +26,7 @@ session_start();
 
 <body id="myPage">
 
-    <!-- Sidebar on click 
-<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
-    <i class="fa fa-remove"></i>
-  </a>
-  <a href="#home" class="w3-bar-item w3-button">HOME</a>
-  <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+  
   
 </nav>-->
     <!---------------------------------------------------------------------------------------------------------------------->
@@ -82,12 +75,7 @@ session_start();
             <form action="connect1.php" method="post">
 
                 <h2 style="color: black;" class="text-center">Sign in</h2>
-                <!--- <div class="text-center social-btn">
-                    <a href="#" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
-                    <a href="#" class="btn btn-danger btn-block"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
-                </div>
-                <div style="color: black;" class="or-seperator"><i>or</i></div>-->
-                <div class="form-group">
+                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
                         <input type="text" class="form-control" name="username" placeholder="Username" required="required">

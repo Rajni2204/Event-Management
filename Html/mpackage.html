@@ -28,14 +28,10 @@
 
 
     <div class="sidebar">
-        <a href="madvenue.html"><!--<i
-            class='fas fa-landmark'></i>-->&nbsp; Manage Venues</a>
-        <a href="mnbook.html"><!--<i
-            class='fas fa-edit'>--></i>&nbsp; Manage Events</a>
-        <a class="active" href="mpackage.html"><!--<i
-            class='fas fa-eye'></i>-->&nbsp; Manage Packages</a>
-        <a href="mvbook.html"><!--<i
-                class='fas fa-eye'></i>-->&nbsp; Manage Booking</a>
+        <a href="madvenue.html">&nbsp; Manage Venues</a>
+        <a href="mnbook.php"></i>&nbsp; Manage Events</a>
+        <a class="active" href="mpackage.html">&nbsp; Manage Packages</a>
+        <a href="mvbook.html">&nbsp; Manage Booking</a>
     </div>
     </div>
     </div>
@@ -47,19 +43,12 @@
                 <li><a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></li>
             </ul>
         </li>
-        <li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge"></span></a></li>
+        <li class="nav-item"><a href="packagedit.php" class="nav-link notifications"><b>View Facility History</b><span class="badge"></span></a></li>
         <li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge"></span></a></li>
 
     </ul>
     </div>
 
-    <!--<div class="w3-top">
-        <div class="w3-bar w3-theme-d2 w3-left-align">
-            <div class="w3-bar w3-theme-d2 w3-left-align">
-                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-                <a href="malogout.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Logout</a>
-            </div>
-        </div>-->
 
 
     <!-- Navbar on small screens -->
@@ -71,51 +60,35 @@
         <a href="#" class="w3-bar-item w3-button">Search</a>
     </div>
     </div>
-    <fieldset style="width: 100%; background-color: rgba(122, 120, 116, 0.479); text-align: center; margin-left: 15%">
 
-        <table>
-            <tr>
+    <fieldset style="width: 100%; background-color: rgba(122, 120, 116, 0.479); margin-left: 15%">
+        <h2>Add Packages</h2>
+        <form action="insertpackage.php" method="POST">
+            <table>
 
-                <td>Select Venues:</td>
-                <td><select name="preffered">
-                  <option value='' selected>All</option>
-                  <option value="Wedding">1</option>
-                  <option value="weddinganniversary">2</option>
-                  <option value="Birthdayparty">3</option>
-                  <option value="gettogether">4</option>
-                </select></td>
-            </tr>
-            <tr>
 
-                <td>Select Packages:</td>
-                <td><select name="preffered">
-                  <option value='' selected>All</option>
-                  <option value="df">Flower Decoration</option>
-                  <option value="db">Ballon Decoration</option>
-                  <option value="bf">Break fast</option>
-                  <option value="lunch">Lunch</option>
-                  <option value="din">Dinner</option>
-                  <option value="sl">Sound and lighting</option>
-                  <option value="dj">Dj</option>
-                  <option value="ph">Photography</option>
-                </select></td>
-            </tr>
+                <tr>
 
-            <tr>
-                <td>Enter Amount:</td>
-                <td><input type="text" id="fd"></td>
-            </tr>
-            <tr>
-                <td>
-                    <button class="button0" type="submit" style="font-size:17px">Add <i class="material-icons"></i></button>
-                    <button class="button1" type="submit">Cancel</button></td>
-            </tr>
-        </table>
+                    <td>Select Packages:
+                        <select name='preffered'>
+                           
+                        </select>
+                </tr>
+
+                <tr>
+                    <td>Enter Amount:</td>
+                    <td><input type="text" name="amount" placeholder="Enetr package price" id="fd"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button0" name="add" type="submit" style="font-size:17px">Add <i class="material-icons"></i></button>
+                        <button class="button1" type="submit">Cancel</button></td>
+                </tr>
+            </table>
+        </form>
     </fieldset>
 
-    <!---------------------------------------------------------------------------------------------------------------------->
-    <!---------------------------------------------------------------------------------------------------------------------->
-    <!-- Footer -->
+
 
 
 </body>

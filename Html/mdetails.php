@@ -1,7 +1,7 @@
 <?php
 // Start the session
 session_start();
-$id = $_SESSION["id"] //Session variable id retrieved
+$id = $_SESSION["id"] ;//Session variable id retrieved
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@ $id = $_SESSION["id"] //Session variable id retrieved
     <link rel="stylesheet" href="css\mainstyle.css">
     <link rel="stylesheet" href="css\adsidecss.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+<script src="js\mainjs.js"></script>
 </head>
 
 <body>
@@ -35,14 +35,11 @@ $id = $_SESSION["id"] //Session variable id retrieved
     <div class="sidebar">
 
         <a class="active" href="mdetails.php">
-            <!--<i
-                class='fas fa-landmark'></i>-->&nbsp; My Profile</a>
-        <a href="book11.html">
-            <!--<i
-                class='fas fa-edit'>--></i>&nbsp;Book An Event</a>
+            &nbsp; My Profile</a>
+        <a href="book11.php">
+            &nbsp;Book An Event</a>
         <a href="mbookh.html">
-            <!--<i
-                class='fas fa-eye'></i>-->&nbsp;Cancel An Event</a>
+           &nbsp;Cancel An Event</a>
         <a href="mfeedback.html">&nbsp;My History</a>
     </div>
     </div>
@@ -92,7 +89,8 @@ $id = $_SESSION["id"] //Session variable id retrieved
         ?>
         <!-- Have to collect this data from Teacher Database -->
         <fieldset>
-        <table style>
+        <table>
+            
           
         <h1>My Details</h1>
                     <?php
@@ -110,7 +108,7 @@ $id = $_SESSION["id"] //Session variable id retrieved
                             
                         }
                     } else {
-                        echo "Unregistered user. Sign Up first.";
+                        echo "You Deleted Your Account. Sign Up first.";
                     }
                     ?>
               
@@ -119,12 +117,11 @@ $id = $_SESSION["id"] //Session variable id retrieved
                 <td><button class="button0" name="edit" onclick="window.location.href='mupdate.php'">
                     Edit Your Details
                 </button></td>
-                <td><button class="button1" name="delete"onclick="window.location.href='delete.php'" >
-                Delete Your Account
-                </button></td>
+                
             
-            
-        </table>
+                <td><button type="button" onclick="myFunction1(); window.location.href='delete.php'" class="btn btn-lg btn-danger"  >Delete Account</button>
+                </td>
+        </tr></table>
         </fieldset>
            </div>
     

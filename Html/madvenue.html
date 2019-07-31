@@ -30,14 +30,13 @@
 
 
     <div class="sidebar">
-        <a class="active" href="madvenue.html"><!--<i
-            class='fas fa-landmark'></i>-->&nbsp; Manage Venues</a>
-        <a href="mnbook.html"><!--<i
-            class='fas fa-edit'>--></i>&nbsp; Manage Events</a>
-        <a href="mpackage.html"><!--<i
-            class='fas fa-eye'></i>-->&nbsp; Manage Packages</a>
-        <a href="mvbook.html"><!--<i
-                class='fas fa-eye'></i>-->&nbsp; Manage Booking</a>
+        <a class="active" href="madvenue.php">
+           &nbsp; Manage Venues</a>
+        <a href="mnbook.html">
+            &nbsp; Manage Events</a>
+        <a href="mpackage.html">
+       &nbsp; Manage Packages</a>
+        <a href="mvbook.html"> Manage Booking</a>
     </div>
     </div>
     </div>
@@ -49,7 +48,7 @@
                 <li><a href="logout1.php" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></li>
             </ul>
         </li>
-        <li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"> &nbsp; Upcoming Events</i><span class="badge"></span></a></li>
+        <li class="nav-item"><a href="venuedit1.php" class="nav-link notifications"> &nbsp; <b>View Venue History</b><span class="badge"></span></a></li>
         <li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge"></span></a></li>
 
     </ul>
@@ -78,44 +77,42 @@
     <!---------------------------------------------------------------------------------------------------------------------->
     <!---------------------------------------------------------------------------------------------------------------------->
     <!-- Footer -->
+
     <form action="venue.php" method="POST">
+
         <fieldset>
+
             <table align="center">
                 <h3>Add Venue</h3>
                 <tr>
                     <td>Add Venue</td>
                     <td>
-                        <input id="venue" name="venue" type=" text " onclick="name()"></td>
+                        <input id="venue" name="venue" type=" text " placeholder="Enter Venue Name" onclick="name()"></td>
                 </tr>
+
                 <tr>
-                    <td>city</td>
-                    <td>
-                        <input id="city" name="city" type=" text " onclick="name()"></td>
-                </tr>
-                <tr>
+                    <br>
                     <td>Address</td>
-                    <td><input id="address" name="address" type="text " onclick="name()"></td>
+                    <td><input id="address" name="address" type="text " placeholder="Enter Venue Address" onclick="name()"></td>
                 </tr>
 
                 <tr>
                     <td>capacity</td>
-                    <td><input id="capacity" name="capacity" type="text " onclick="name()"></td>
+                    <td><input id="capacity" name="capacity" type="text " placeholder="Enter Capacity(people)" onclick="name()"></td>
                 </tr>
                 <tr>
-                    <tr>
-                        <td>Enter Event Type</td>
-                        <td><input name="preffered" type="text " onclick="name()"></td>
-                    </tr>
+
                     <tr>
                         <tr>
                             <td>Enter Amount.</td>
-                            <td><input id="amount" name="amount" type="text " onclick="name()"></td>
+                            <td><input id="amount" name="amount" type="text " placeholder="Enter Venue Rent" onclick="name()"></td>
                         </tr>
                         <tr>
                             <td>
 
                                 <button class="button0 " name="add" type="submit " style="font-size:17px ">Add <i class="material-icons "></i></button>
                                 <button class="button1 " type="submit ">Cancel</button></td>
+
                         </tr>
             </table>
         </fieldset>

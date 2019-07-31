@@ -4,7 +4,7 @@ fieldset {
     text-align: center;
     margin-bottom: 30%;
     margin-top: 5%;
-    margin-left: 10%;
+    margin-left: 15%;
     margin-right: 10%;
     padding-top: 0.35em;
     padding-bottom: 0.625em;
@@ -16,16 +16,26 @@ fieldset {
 
 .fieldset2 {
     display: block;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(170, 162, 162, 0.2);
     text-align: center;
     margin-bottom: 30%;
     margin-top: 5%;
-    margin-left: 30%;
     padding-top: 0.35em;
     padding-bottom: 0.625em;
-    padding-left: 0.75em;
     border: none;
     width: 90%;
+    height: 100%;
+}
+
+.fieldset3 {
+    display: block;
+    background-color: rgb(29, 28, 28);
+    text-align: center;
+    margin-bottom: 30%;
+    margin-top: 5%;
+    /* margin-left: 30%;*/
+    border: none;
+    width: 70%;
     height: 100%;
 }
 
@@ -109,6 +119,11 @@ table {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.div1 {
+    width: 100%;
+    height: 7%;
 }
 
 html {
